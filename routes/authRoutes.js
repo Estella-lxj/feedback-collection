@@ -20,6 +20,6 @@ module.exports = (app) => {
 	});
 
 	app.get('/googleb7a43c1ce5fde505.html', (req, res) => {
-		res.send(req.user);
+		res.send('google-site-verification: googleb7a43c1ce5fde505.html');
 	});
 };
