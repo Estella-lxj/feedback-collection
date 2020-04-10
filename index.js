@@ -1,4 +1,3 @@
-google-site-verification: googleb7a43c1ce5fde505.html
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
