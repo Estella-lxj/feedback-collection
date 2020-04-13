@@ -5,8 +5,10 @@ const passport = require("passport");
 const keys = require("./config/keys");
 const app = express();
 require("./models/User");
+require("./models/Survey");
 require("./services/passport");
 
+mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 
 app.use(express.json());
@@ -22,6 +24,7 @@ app.use(passport.session());
 
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
+require("./routes/surveyRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
 	//express will server up production main.js in build
