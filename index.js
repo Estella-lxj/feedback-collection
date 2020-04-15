@@ -4,6 +4,8 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const keys = require("./config/keys");
 const app = express();
+
+
 require("./models/User");
 require("./models/Survey");
 require("./services/passport");
@@ -12,7 +14,6 @@ mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 
 app.use(express.json());
-
 app.use(
 	cookieSession({
 		maxAge: 30 * 24 * 60 * 60 * 1000,
